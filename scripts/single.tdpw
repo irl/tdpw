@@ -1,0 +1,4 @@
+squares
+frames 200
+shape 10 10 40 3 3 green
+run

@@ -1,0 +1,5 @@
+squares
+inelastic
+shape 10 60 40 2 0 green
+shape 100 60 40 0 0 blue
+run
