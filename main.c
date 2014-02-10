@@ -411,6 +411,5 @@ int main(int argc, char* argv[])
 
 	system("rm -f _*.ppm _*.gif");
 
-	system("x-www-browser anim.gif");
 }
 
