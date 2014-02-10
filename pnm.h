@@ -17,6 +17,5 @@ typedef struct pic Pic;
 
 
 Pic makenewpic (int w, int h);
-Pic readpnm (const char *fname);
 void writepnm(Pic p,  const char * dest);
 
