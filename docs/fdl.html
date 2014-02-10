@@ -1,0 +1,74 @@
+<h1>Flat Description Language</h1>
+
+<p>The <b>F</b>lat <b>D</b>escription <b>L</b>anguage is a declarative programming language for defining objects in a 2D universe. It is built of a series of operators with zero or more operands. All operands for a given operator are compulsary, and are delimited by spaces. Each new operator must be on a new line.</p>
+
+<h2>Shape Type</h2>
+<dl>
+	<dt>circles</dt>
+	<dd>This operator takes no operands, and sets the type of shape to circle. If <code>squares</code> has previously been set, this will be overwritten.</dd>
+
+        <dt>squares</dt>
+        <dd>This operator takes no operands, and sets the type of shape to square. If <code>circles</code> has previously bee
+n set, this will be overwritten.</dd>
+</dl>
+
+<h2>Collision Type</h2>
+<h3>Between Shapes</h3>
+<dl>
+	<dt>elastic</dt>
+        <dd>This operator takes no operands, and sets the type of collision to elastic. If <code>inelastic</code> has previously been set, this will be overwritten.</dd>
+
+        <dt>inelastic</dt>
+        <dd>This operator takes no operands, and sets the type of collision to inelastic. If <code>elastic</code> has previously been set, this will be overwritten.</dd>
+
+	<dt>nocollide</dt>
+	<dd>This operator takes no operands, and disables collisions between shapes. This operator will overwrite <code>elastic</code> and <code>inelastic</code> and can also be overwritten by them.</dd>
+</dl>
+<h3>Walls</h3>
+<dl>
+	<dt>wrap</dt>
+	<dd>This operator takes no operands, and removes collisions with walls. Shapes that would otherwise have had an elastic collision with the wall will wrap around to the wall on the opposite side. If <code>nowrap</code> has previously been set, this will be overwritten.</dd>
+
+	<dt>nowrap</dt>
+	<dd>This operator takes no operands, and sets shapes to have elastic collisions with the walls. If <code>wrap</code> has previously been set, this will be overwritten.</dd>
+</dl>
+
+<h2>Animation Options</h2>
+<dl>
+	<dt>frames</dt>
+	<dd>This operator takes one operand, an integer representing the number of frames to be generated. This will overwrite any previous definition set by <code>frames</code>.</dd>
+
+        <dt>freeze</dt>
+        <dd>This operator takes one operand, an integer representing the number of frames to have no movement at the start of the animation. These frames count towards the total number of frames set by the <code>frames</code> operator, and will not add extra frames to the animation. This will overwrite any previous definition set by <code>freeze</code>.</dd>
+</dl>
+
+<h2>Shape Definition</h2>
+<dl>
+	<dt>shape</dt>
+	<dd>This operator takes the following arguments to define a shape:
+		<ul>
+			<li>X coordinate of top-left corner (integer)</li>
+			<li>Y coordinate of top-left corner (integer)</li>
+			<li>Width of shape (integer)</li>
+			<li>Initial velocity of X component vector (integer)</li>
+			<li>Initial velocity of Y component vector (integer)</li>
+			<li>Colour (red|green|blue|yellow|cyan|purple|white|random)</li>
+		</ul>
+		Subsequent definitions will create new shapes up to a maximum of 1000 shapes.
+	</dd>
+</dl>
+
+<h2>Testing</h2>
+<dl>
+	<dt>echo</dt>
+	<dd>This command takes one operand, a string to be printed back. This is used for testing the interactive shell, and serves no other useful purpose.</dd>
+</dl>
+
+<h2>Control</h2>
+<dl>
+	<dt>run</dt>
+	<dd>This command takes no operands, and will begin creating the animation.</dd>
+
+	<dt>exit</dt>
+	<dd>This command takes no operands, and will exit without creating the animation.</dd>
+</dl>
