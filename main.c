@@ -121,7 +121,7 @@ void parseInput(int *t, int *w, int *h, int *f, int *el, int *wr, int *fz, int *
 		input = readline(prompt);
 
 
-		if ( !input )
+		if ( input == 0 || *input == 0 )
 			continue;
 
 		add_history(input);
