@@ -1,5 +1,5 @@
 circles
-inelastic
+elastic
 frames 200
 shape 10 10 10 1 -2 random
 shape 10 60 10 -2 0 random
