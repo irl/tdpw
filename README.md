@@ -3,7 +3,7 @@ tdpw
 
 The Two-Dimensional Physics Workbench
 
-See http://irl.sdf.org/tdpw/ for more documentation.
+See `docs/` for more documentation.
 
 License
 -------
