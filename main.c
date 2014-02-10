@@ -230,8 +230,7 @@ void parseInput(int *t, int *w, int *h, int *f, int *el, int *wr, int *fz, int *
  *   a. Draw shapes
  *   b. Do movement
  * 3) Make animated gif with gifsicle
- * 4) Make MPEG with ffmpeg
- * 5) Launch firefox
+ * 4) Launch a sane HTML viewer
  */
 int main(int argc, char* argv[])
 {
@@ -408,14 +407,10 @@ int main(int argc, char* argv[])
 
 	system("gifsicle _*.gif > anim.gif");
 
-	printf("Creating MPEG movie...\n");
-
-	system("yes | ffmpeg -i _%03d.gif anim.mpg >/dev/null 2>/dev/null"); 
-
 	printf("Cleaning up...\n");
 
 	system("rm -f _*.ppm _*.gif");
 
-	system("firefox anim.gif");
+	system("x-www-browser anim.gif");
 }
 
