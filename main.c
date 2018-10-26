@@ -53,19 +53,19 @@ int strtocolour(char* colour)
 		int r = rand() % 7;
 		switch ( r )
 		{
-			case 0: colour = "red";
+			case 0: colour = (char*)"red";
 				break;
-			case 1: colour = "green";
+			case 1: colour = (char*)"green";
 				break;
-			case 2: colour = "blue";
+			case 2: colour = (char*)"blue";
 				break;
-			case 3: colour = "yellow";
+			case 3: colour = (char*)"yellow";
 				break;
-			case 4: colour = "cyan";
+			case 4: colour = (char*)"cyan";
 				break;
-			case 5: colour = "purple";
+			case 5: colour = (char*)"purple";
 				break;
-			case 6: colour = "white";
+			case 6: colour = (char*)"white";
 				break;
 		}
 	}
